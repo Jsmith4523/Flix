@@ -10,6 +10,9 @@ import Nuke
 class ViewController: UIViewController {
 
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     // TODO: Add table view outlet
 
 
@@ -20,8 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // TODO: Assign table view data source
-
-
+        tableView.dataSource = self
+        tableView.delegate = self
         fetchMovies()
     }
 
@@ -92,6 +95,23 @@ class ViewController: UIViewController {
         // Don't forget to run the session!
         session.resume()
     }
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        print(identifier)
+    }
+}
 
-
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "Example"
+        return cell
+    }
+    
+    
 }
