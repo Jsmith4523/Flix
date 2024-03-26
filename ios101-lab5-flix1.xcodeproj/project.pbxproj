@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24F665862BAD1C06004EB9F8 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F665842BAD1C06004EB9F8 /* MovieTableViewCell.swift */; };
+		24F665892BB22AE6004EB9F8 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F665882BB22AE6004EB9F8 /* MovieDetailViewController.swift */; };
 		ED83EE9A29B05FCE007A4FC9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83EE9929B05FCE007A4FC9 /* Movie.swift */; };
 		ED83EE9D29B06A4C007A4FC9 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = ED83EE9C29B06A4C007A4FC9 /* Nuke */; };
 		ED88ABF229AD9858008A6FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88ABF129AD9858008A6FF6 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		24F665842BAD1C06004EB9F8 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		24F665882BB22AE6004EB9F8 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		ED83EE9929B05FCE007A4FC9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ED88ABEE29AD9858008A6FF6 /* ios101-lab5-flix1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios101-lab5-flix1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED88ABF129AD9858008A6FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				ED88ABF129AD9858008A6FF6 /* AppDelegate.swift */,
 				ED88ABF329AD9858008A6FF6 /* SceneDelegate.swift */,
 				ED88ABF529AD9858008A6FF6 /* ViewController.swift */,
+				24F665882BB22AE6004EB9F8 /* MovieDetailViewController.swift */,
 				24F665842BAD1C06004EB9F8 /* MovieTableViewCell.swift */,
 				ED83EE9929B05FCE007A4FC9 /* Movie.swift */,
 				ED88ABF729AD9858008A6FF6 /* Main.storyboard */,
@@ -156,6 +159,7 @@
 				ED88ABF629AD9858008A6FF6 /* ViewController.swift in Sources */,
 				ED88ABF229AD9858008A6FF6 /* AppDelegate.swift in Sources */,
 				ED83EE9A29B05FCE007A4FC9 /* Movie.swift in Sources */,
+				24F665892BB22AE6004EB9F8 /* MovieDetailViewController.swift in Sources */,
 				ED88ABF429AD9858008A6FF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

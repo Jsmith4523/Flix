@@ -96,24 +96,32 @@ class ViewController: UIViewController {
         // Don't forget to run the session!
         session.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! MovieDetailViewController
+        
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            let movie = self.movies[selectedIndexPath.row]
+            destination.movie = movie
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.performSegue(withIdentifier: "Movie Detail", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellView = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
-        cellView.awakeFromNib()
         let movie = self.movies[indexPath.row]
         
-        cellView.movie = movie
         cellView.movieTitle.text = movie.title
         cellView.movieDescription.text = movie.overview
         
-        if let postPath = movie.poster_path, let url = URL(string: "https://image.tmdb.org/t/p/w500"+postPath) {
+        if let postPath = movie.posterPath, let url = URL(string: "https://image.tmdb.org/t/p/w500"+postPath) {
             Nuke.loadImage(with: url, into: cellView.moviePosterImageView)
         }
         
