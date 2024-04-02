@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244362CA2BBB6DF90096C466 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244362C92BBB6DF90096C466 /* FavoritesManager.swift */; };
 		24F665862BAD1C06004EB9F8 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F665842BAD1C06004EB9F8 /* MovieTableViewCell.swift */; };
 		24F665892BB22AE6004EB9F8 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F665882BB22AE6004EB9F8 /* MovieDetailViewController.swift */; };
 		ED83EE9A29B05FCE007A4FC9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83EE9929B05FCE007A4FC9 /* Movie.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		244362C92BBB6DF90096C466 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		24F665842BAD1C06004EB9F8 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		24F665882BB22AE6004EB9F8 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		ED83EE9929B05FCE007A4FC9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244362C82BBB6DEC0096C466 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				244362C92BBB6DF90096C466 /* FavoritesManager.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		ED88ABE529AD9858008A6FF6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		ED88ABF029AD9858008A6FF6 /* ios101-lab5-flix1 */ = {
 			isa = PBXGroup;
 			children = (
+				244362C82BBB6DEC0096C466 /* Favorites */,
 				ED88ABF129AD9858008A6FF6 /* AppDelegate.swift */,
 				ED88ABF329AD9858008A6FF6 /* SceneDelegate.swift */,
 				ED88ABF529AD9858008A6FF6 /* ViewController.swift */,
@@ -158,6 +169,7 @@
 				24F665862BAD1C06004EB9F8 /* MovieTableViewCell.swift in Sources */,
 				ED88ABF629AD9858008A6FF6 /* ViewController.swift in Sources */,
 				ED88ABF229AD9858008A6FF6 /* AppDelegate.swift in Sources */,
+				244362CA2BBB6DF90096C466 /* FavoritesManager.swift in Sources */,
 				ED83EE9A29B05FCE007A4FC9 /* Movie.swift in Sources */,
 				24F665892BB22AE6004EB9F8 /* MovieDetailViewController.swift in Sources */,
 				ED88ABF429AD9858008A6FF6 /* SceneDelegate.swift in Sources */,

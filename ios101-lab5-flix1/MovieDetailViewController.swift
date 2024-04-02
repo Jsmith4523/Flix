@@ -17,6 +17,12 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieVote: UILabel!
     @IBOutlet weak var movieDate: UILabel!
     
+    @IBOutlet weak var favoriteButtonLabel: UIButton!
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
     var movie: Movie!
 
     override func viewDidLoad() {
@@ -25,6 +31,8 @@ class MovieDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        self.favoriteButtonLabel.layer.cornerRadius = favoriteButtonLabel.frame.width / 2
         self.movieTitle.text = movie.title
         self.movieOverview.text = movie.overview
         

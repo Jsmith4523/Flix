@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 140
+        tableView.rowHeight = 200
         tableView.reloadData()
         
         // TODO: Assign table view data source
@@ -123,6 +123,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         if let postPath = movie.posterPath, let url = URL(string: "https://image.tmdb.org/t/p/w500"+postPath) {
             Nuke.loadImage(with: url, into: cellView.moviePosterImageView)
+            cellView.moviePosterImageView.contentMode = .scaleToFill
         }
         
         return cellView
