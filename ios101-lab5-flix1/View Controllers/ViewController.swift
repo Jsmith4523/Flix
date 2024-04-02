@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     
     
     // TODO: Add property to store fetched movies array
-    private var movies = [Movie]()
+    private var movies = [Movie]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -24,7 +28,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 200
-        tableView.reloadData()
+        tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
         
         // TODO: Assign table view data source
         fetchMovies()

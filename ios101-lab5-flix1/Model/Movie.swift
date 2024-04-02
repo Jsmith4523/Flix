@@ -9,7 +9,7 @@ struct MovieResponse: Decodable {
     let results: [Movie]
 }
 
-struct Movie: Decodable {
+struct Movie: Codable {
     let title: String
     let overview: String
     let posterPath: String? // Path used to create a URL to fetch the poster image

@@ -20,7 +20,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var favoriteButtonLabel: UIButton!
     
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+        self.favoriteMovie()
     }
     
     var movie: Movie!
@@ -31,6 +31,7 @@ class MovieDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.isMovieFavorited()
         
         self.favoriteButtonLabel.layer.cornerRadius = favoriteButtonLabel.frame.width / 2
         self.movieTitle.text = movie.title
@@ -55,5 +56,20 @@ class MovieDetailViewController: UIViewController {
         if let backdropPath = movie.backdropPath, let imageUrl = URL(string: "https://image.tmdb.org/t/p/w500" + backdropPath) {
             Nuke.loadImage(with: imageUrl, into: bannerImage)
         }
+    }
+    
+    private func favoriteMovie() {
+        if FavoritesManager.manager.isFavorite(movie) {
+            FavoritesManager.manager.removeFromFavorites(movie)
+        } else {
+            FavoritesManager.manager.addToFavorites(movie)
+        }
+        
+        isMovieFavorited()
+    }
+    
+    private func isMovieFavorited() {
+        let imageName = FavoritesManager.manager.isFavorite(movie) ? "heart.fill" : "heart"
+        favoriteButtonLabel.setImage(UIImage(systemName: imageName), for: .normal)
     }
 }

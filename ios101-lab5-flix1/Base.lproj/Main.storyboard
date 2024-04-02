@@ -27,38 +27,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rs8-Kd-FAV" id="he9-rD-v3N" customClass="MovieTableViewCell" customModule="ios101_lab5_flix1" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hq1-KV-yvI">
-                                                    <rect key="frame" x="12" y="6" width="120" height="183"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FES-hO-Tiv">
-                                                    <rect key="frame" x="140" y="6" width="233" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjx-TC-2kQ">
-                                                    <rect key="frame" x="140" y="64" width="233" height="125"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="movieDescription" destination="Cjx-TC-2kQ" id="w0b-k1-P3b"/>
-                                            <outlet property="moviePosterImageView" destination="hq1-KV-yvI" id="y8r-lm-VmQ"/>
-                                            <outlet property="movieTitle" destination="FES-hO-Tiv" id="52H-QR-2tc"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -152,6 +121,7 @@
                                                     <constraint firstAttribute="height" constant="55" id="RzW-Wy-set"/>
                                                     <constraint firstAttribute="width" constant="55" id="z8X-cf-OpX"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
@@ -256,7 +226,7 @@
         <!--Favorites-->
         <scene sceneID="Qnb-9G-b8P">
             <objects>
-                <viewController id="z9f-YD-qlC" sceneMemberID="viewController">
+                <viewController id="z9f-YD-qlC" customClass="FavoritesViewController" customModule="ios101_lab5_flix1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ubc-Mf-xtd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,29 +245,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍿 Add Some Favorite Movies!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMh-ed-dDE">
-                                <rect key="frame" x="79.666666666666671" y="415.66666666666669" width="233.66666666666663" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i5R-Le-Rb2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YMh-ed-dDE" firstAttribute="centerY" secondItem="Ubc-Mf-xtd" secondAttribute="centerY" id="2VD-F3-k3T"/>
                             <constraint firstItem="LjW-ww-DrR" firstAttribute="leading" secondItem="i5R-Le-Rb2" secondAttribute="leading" id="4e6-sJ-Nze"/>
                             <constraint firstAttribute="bottom" secondItem="LjW-ww-DrR" secondAttribute="bottom" id="Dfh-ge-FrJ"/>
                             <constraint firstItem="LjW-ww-DrR" firstAttribute="trailing" secondItem="i5R-Le-Rb2" secondAttribute="trailing" id="I4p-UR-5nD"/>
                             <constraint firstItem="LjW-ww-DrR" firstAttribute="top" secondItem="i5R-Le-Rb2" secondAttribute="top" id="IGm-IL-iDU"/>
-                            <constraint firstItem="YMh-ed-dDE" firstAttribute="centerX" secondItem="Ubc-Mf-xtd" secondAttribute="centerX" id="V4x-Q8-n2Y"/>
-                            <constraint firstItem="YMh-ed-dDE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5R-Le-Rb2" secondAttribute="leading" id="WA7-F6-VLl"/>
-                            <constraint firstItem="i5R-Le-Rb2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YMh-ed-dDE" secondAttribute="trailing" id="bAx-CO-A83"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="b0B-GZ-7lL"/>
                     <connections>
-                        <segue destination="GXV-gG-z3D" kind="show" id="MGR-Uu-5v6"/>
+                        <outlet property="tableView" destination="LjW-ww-DrR" id="CmH-tD-3xb"/>
+                        <segue destination="GXV-gG-z3D" kind="show" identifier="Movie Detail" id="MGR-Uu-5v6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTb-br-u5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -310,6 +271,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1o0-iq-tfc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQd-XT-Mgr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -343,7 +305,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9oC-R7-Nrj"/>
+        <segue reference="MGR-Uu-5v6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
@@ -352,11 +314,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
